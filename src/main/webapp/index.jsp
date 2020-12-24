@@ -68,7 +68,7 @@
                         String email = request.getParameter("emailUsuario");
                         String pass = request.getParameter("claveUsuario");
                         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-                        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/nuevaFotoBase?user=root&password=root");
+                        Connection conn = DriverManager.getConnection("jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_b1f36675180c036?user=bcbdb711ea320c&password=2efa6260");
 
                         PreparedStatement pst = conn.prepareStatement("Select email,idUsuario from usuario where email=? and claveUsuario=?");
                         pst.setString(1, email);
